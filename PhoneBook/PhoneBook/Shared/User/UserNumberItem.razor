@@ -1,0 +1,16 @@
+﻿@inherits UserNumberItemBase
+
+
+
+<div class="card">
+    <h5 class="Name">@Usernumbers.FullName</h5>
+    <p class="title">@Usernumbers.Department</p>
+    <p class="HideShowUsernumbers" @onclick="ToogleDetail">@btncontent numbers...</p>
+    <div class="PhoneUsernumbers" hidden="@collapse">
+        <p>Mobile <span>@Usernumbers.MobileNumber</span></p>
+        <p>Internal <span>@Usernumbers.InternalNumber</span></p>
+    </div>
+</div>
+
+
+

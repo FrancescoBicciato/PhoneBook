@@ -1,0 +1,34 @@
+﻿@page "/NumberList"
+@inherits NumberListBase
+
+<h3>Number List</h3>
+
+@if (hideLoading)
+{
+    <div id="NumberList">
+
+
+        @foreach (var number in Usernumbers)
+        {  
+            <PhoneBook.Shared.User.UserNumberItem Usernumbers="number"></PhoneBook.Shared.User.UserNumberItem>
+        }
+    </div>
+    
+}
+else
+{
+    if (noNumber)
+    {
+        <p>List is Empty</p>
+    }
+    <Loading></Loading>
+
+}
+
+
+
+
+
+
+
+
